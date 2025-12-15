@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Hans James | Systems Engineer',
+  title: 'Hans James :: Systems Engineer',
   description: 'Portfolio of a Systems Engineer.',
 };
 
