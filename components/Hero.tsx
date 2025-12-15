@@ -1,8 +1,9 @@
 // components/Hero.tsx
 'use client';
 
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { Github, ArrowRight, Terminal } from 'lucide-react';
+import { motion } from 'framer-motion';
+// Added FileText to imports
+import { Github, ArrowRight, FileText } from 'lucide-react'; 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -30,14 +31,11 @@ export default function Hero() {
           : fullText.substring(0, text.length + 1)
       );
 
-      // Dynamic typing speed
       setTypingSpeed(isDeleting ? 30 : 150);
 
-      // Pause before deleting
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), 1500); 
       } 
-      // Move to next phrase after deleting
       else if (isDeleting && text === '') {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
@@ -95,7 +93,19 @@ export default function Hero() {
           </motion.button>
         </Link>
 
-        {/* Secondary Button: GitHub */}
+        {/* Secondary Button: Resume (Added) */}
+        <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <motion.button
+            whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.05)' }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 rounded-full border border-zinc-700 px-8 py-3 text-sm font-mono text-zinc-300 transition-colors hover:border-zinc-500 hover:text-white"
+          >
+            <FileText size={16} />
+            <span>Resume</span>
+          </motion.button>
+        </Link>
+
+        {/* Tertiary Button: GitHub */}
         <Link href="https://github.com/BAT4K" target="_blank">
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.05)' }}

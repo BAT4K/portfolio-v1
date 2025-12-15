@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 'use client';
 
 import Link from 'next/link';
@@ -7,9 +6,11 @@ import { useState } from 'react';
 import CommandPalette from './CommandPalette';
 import { useTerminal } from '@/context/TerminalContext';
 
+// 1. Updated Data Array
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Work', href: '/work' },
+  { name: 'Resume', href: '/resume.pdf', isExternal: true }, // Added Resume
   { name: 'About', href: '/about' },
 ];
 
@@ -30,11 +31,8 @@ export default function Navbar() {
             onMouseLeave={() => setLogoText('sys_eng')}
             className="group flex items-center gap-2 font-mono text-lg font-bold tracking-tighter transition-colors hover:text-emerald-400"
           >
-            {/* The Icon serves as the ">_" prompt */}
             <Terminal size={20} className="text-emerald-500 transition-transform group-hover:scale-110" />
-            
             <span>
-              {/* Removed the extra "&gt;_" here */}
               {logoText}
               <span className="animate-pulse ml-1 opacity-0 group-hover:opacity-100 transition-opacity">_</span>
             </span>
@@ -58,6 +56,9 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
+                // 2. Conditional props for external links
+                target={link.isExternal ? "_blank" : undefined}
+                rel={link.isExternal ? "noopener noreferrer" : undefined}
                 className="text-sm font-medium text-zinc-400 transition-colors hover:text-[#ededed] font-mono"
               >
                 {link.name}
