@@ -2,7 +2,7 @@
 'use client';
 
 import { Command } from 'cmdk';
-import { useEffect } from 'react';
+import { useEffect, Dispatch, SetStateAction } from 'react'; // 1. Add imports
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -18,7 +18,7 @@ import {
 
 interface Props {
   open: boolean;
-  setOpen: (open: boolean) => void;
+  setOpen: Dispatch<SetStateAction<boolean>>; // 2. Update type definition
 }
 
 export default function CommandPalette({ open, setOpen }: Props) {
@@ -40,7 +40,7 @@ export default function CommandPalette({ open, setOpen }: Props) {
 
     document.addEventListener('keydown', down);
     return () => document.removeEventListener('keydown', down);
-  }, [setOpen]); // Added setOpen dependency for safety
+  }, [setOpen]);
 
   const runCommand = (command: () => void) => {
     setOpen(false);
