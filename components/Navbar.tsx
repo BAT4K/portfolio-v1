@@ -7,11 +7,10 @@ import { useState } from 'react';
 import CommandPalette from './CommandPalette';
 import { useTerminal } from '@/context/TerminalContext';
 
-// 1. Updated Data Array
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Work', href: '/work' },
-  { name: 'Resume', href: '/Hans_James_Resume.pdf', isExternal: true }, // Added Resume
+  { name: 'Resume', href: '/Hans_James_Resume.pdf', isExternal: true },
   { name: 'About', href: '/about' },
 ];
 
@@ -57,7 +56,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                // 2. Conditional props for external links
+                // Conditional props for external links
                 target={link.isExternal ? "_blank" : undefined}
                 rel={link.isExternal ? "noopener noreferrer" : undefined}
                 className="text-sm font-medium text-zinc-400 transition-colors hover:text-[#ededed] font-mono"
