@@ -18,13 +18,13 @@ export default function Icon() {
       <div
         style={{
           fontSize: 20,
-          background: '#0a0a0a', // Your theme background
+          background: '#0a0a0a', // Theme background
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#10b981', // Your Emerald-500 accent
+          color: '#10b981', // Emerald-500 accent
           borderRadius: '4px', // Slight rounded corners looks modern
           fontFamily: 'monospace',
           fontWeight: 900,
