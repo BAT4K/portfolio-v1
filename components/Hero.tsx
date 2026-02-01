@@ -2,7 +2,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-// Added FileText to imports
 import { Github, ArrowRight, FileText } from 'lucide-react'; 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
