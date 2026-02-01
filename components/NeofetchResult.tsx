@@ -1,3 +1,4 @@
+// components/NeofetchResult.tsx
 import React from 'react';
 
 const NeofetchResult = () => {
