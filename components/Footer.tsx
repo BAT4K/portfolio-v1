@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="border-t border-zinc-800 bg-[#0a0a0a] py-10 mt-auto">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         
-        {/* Copyright / Status - Increased Text Size */}
+        {/* Copyright / Status */}
         <div className="text-center md:text-left space-y-2">
           <p className="font-mono text-sm text-zinc-400">
             © {new Date().getFullYear()} Hans James.
@@ -19,7 +19,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Social Links - Increased Icon Size & Spacing */}
+        {/* Social Links */}
         <div className="flex gap-8">
           <SocialLink href="https://github.com/BAT4K" icon={<Github size={22} />} label="GitHub" />
           <SocialLink href="https://linkedin.com/in/bat4k" icon={<Linkedin size={22} />} label="LinkedIn" />
