@@ -1,7 +1,7 @@
 # Hans James | Systems Engineer Portfolio
 
 > A high-performance, component-driven portfolio designed with a **Systems Engineering** aesthetic.  
-> Built to showcase low-latency architectures, distributed systems, and backend engineering skills.
+> Built to showcase low-latency architectures, distributed systems, and high-performance web engineering.
 
 ![Project Preview](public/preview.png)
 
@@ -16,12 +16,11 @@ It features a fully interactive command-line interface, keyboard-driven navigati
 
 ## Tech Stack
 
-- **Framework:** Next.js 16 (App Router & Server Components)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS v4
-- **Animations:** Framer Motion
-- **UI Components:** Lucide React, CMDK (Command Palette)
-- **Deployment:** Vercel
+![Next.js](https://img.shields.io/badge/Next.js_14-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## Key Features
 
