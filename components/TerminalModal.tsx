@@ -4,7 +4,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Minus, Square } from 'lucide-react';
 import { useTerminal } from '@/context/TerminalContext';
-import Terminal from './Terminal'; // Import your new component
+import Terminal from './Terminal';
 
 export default function TerminalModal() {
   const { isOpen, closeTerminal } = useTerminal();
