@@ -1,3 +1,4 @@
+// components/AboutCode.tsx
 'use client';
 
 import React from 'react';
