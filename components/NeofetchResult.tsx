@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Make sure the component is named 'NeofetchResult', not 'Terminal'
 const NeofetchResult = () => {
   // 1. The Raw String
   const asciiArt = `\${c1}              .'ccccc:.
